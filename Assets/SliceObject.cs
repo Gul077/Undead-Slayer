@@ -28,7 +28,9 @@ public class SliceObject : MonoBehaviour
         if(hasHit)
         {
             GameObject target = hit.transform.gameObject;
-            Slice(target);
+            if (target.gameObject.tag == "Zombie")
+                Slice(target);
+
         }
     }
 
@@ -42,6 +44,8 @@ public class SliceObject : MonoBehaviour
 
         if(hull != null)
         {
+           DisplayScore.score++;
+
             GameObject upperHull = hull.CreateUpperHull(target, crossSectionMaterial);
             SetupSlicedComponent(upperHull);
 
