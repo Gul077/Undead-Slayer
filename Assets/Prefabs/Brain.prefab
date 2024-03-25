@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4763453534949382827}
   - component: {fileID: 6186461964707726545}
   - component: {fileID: 6786273894722784413}
+  - component: {fileID: 8077518889878599162}
+  - component: {fileID: -263650236825505126}
   m_Layer: 0
   m_Name: Brain
   m_TagString: Zombie
@@ -115,3 +117,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8077518889878599162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6420958449702747006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466b1ef5f8b811d409515f2bd32d5a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-263650236825505126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6420958449702747006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466b1ef5f8b811d409515f2bd32d5a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

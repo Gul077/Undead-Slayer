@@ -8,6 +8,7 @@ TagManager:
   - Destroyer
   - Zombie
   - Heart
+  - Ground
   layers:
   - Default
   - TransparentFX
