@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1639680972113865436}
   - component: {fileID: 1639680972113865437}
   - component: {fileID: 1211027088505759188}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Skull
   m_TagString: Zombie
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 5599384407536294146}
   - component: {fileID: 2708709122112947369}
   - component: {fileID: 670686697463644760}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Group29306
   m_TagString: Untagged
   m_Icon: {fileID: 0}

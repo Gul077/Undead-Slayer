@@ -44,7 +44,17 @@ public class SliceObject : MonoBehaviour
 
         if(hull != null)
         {
-           DisplayScore.score++;
+            // Check if the sliced object is on the penalty layer (assuming layer 6 is for penalty objects)
+            if (target.layer == 6) // Using the layer number directly
+            {
+                DisplayScore.score -= 5; // Deduct points for slicing a penalty object
+            }
+            else
+
+
+            {
+                DisplayScore.score++;
+            }
 
             GameObject upperHull = hull.CreateUpperHull(target, crossSectionMaterial);
             SetupSlicedComponent(upperHull);
