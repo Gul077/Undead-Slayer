@@ -5,15 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Projectile
-  - Flame
-  - Water
   - Destroyer
   - Zombie
+  - Heart
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Slicable
   - Water
   - UI
   - Penalty
