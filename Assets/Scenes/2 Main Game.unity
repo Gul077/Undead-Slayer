@@ -303,6 +303,7 @@ MonoBehaviour:
   sliced: {fileID: 8300000, guid: 3c80075b7d9854e4b9819f75adebb400, type: 3}
   thunder: {fileID: 8300000, guid: d1f86a1eec532b443b2dce720483fdc6, type: 3}
   horror: {fileID: 8300000, guid: 40869972fba06ce44a1a024fdf908f9f, type: 3}
+  leaves: {fileID: 8300000, guid: 5f5f6407a3c48ca41842c2c0707f08a0, type: 3}
 --- !u!4 &108924515
 Transform:
   m_ObjectHideFlags: 0
@@ -445,7 +446,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2774,9 +2775,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2818,7 +2819,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.68
       inSlope: 0
       outSlope: 0
       tangentMode: 0

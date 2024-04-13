@@ -13,10 +13,14 @@ public class AudioManager2 : MonoBehaviour
    public AudioClip sliced;
    public AudioClip thunder;
    public AudioClip horror;
+   public AudioClip leaves;
 
    private void Start()
    {
 	   musicSource.clip = background;
 	   musicSource.Play();
+	   SFXSource.clip = thunder;
+	   SFXSource.Play();
    }
+
 }
