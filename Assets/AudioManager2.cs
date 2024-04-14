@@ -12,8 +12,6 @@ public class AudioManager2 : MonoBehaviour
    public AudioClip background;
    public AudioClip sliced;
    public AudioClip thunder;
-   public AudioClip horror;
-   public AudioClip leaves;
 
    private void Start()
    {

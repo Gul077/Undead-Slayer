@@ -299,11 +299,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1896052876}
   SFXSource: {fileID: 222875802}
-  background: {fileID: 8300000, guid: 92a32b0cc9ab41e43a68ed773b24bbcd, type: 3}
+  background: {fileID: 8300000, guid: 0c15a8acc6a7af24392ded425bd7a110, type: 3}
   sliced: {fileID: 8300000, guid: 3c80075b7d9854e4b9819f75adebb400, type: 3}
   thunder: {fileID: 8300000, guid: d1f86a1eec532b443b2dce720483fdc6, type: 3}
-  horror: {fileID: 8300000, guid: 40869972fba06ce44a1a024fdf908f9f, type: 3}
-  leaves: {fileID: 8300000, guid: 5f5f6407a3c48ca41842c2c0707f08a0, type: 3}
 --- !u!4 &108924515
 Transform:
   m_ObjectHideFlags: 0
@@ -2775,7 +2773,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2819,7 +2817,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.68
+      value: 0.8
       inSlope: 0
       outSlope: 0
       tangentMode: 0
