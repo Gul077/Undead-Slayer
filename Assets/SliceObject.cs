@@ -4,7 +4,6 @@ using UnityEngine;
 using EzySlice;
 using UnityEngine.InputSystem;
 
-
 public class SliceObject : MonoBehaviour
 {
     public Transform startSlicePoint;
@@ -15,22 +14,25 @@ public class SliceObject : MonoBehaviour
     public Material crossSectionMaterial;
     public float cutForce = 2000;
 
+    // Reference to AudioManager2 script
+    private AudioManager2 audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Get reference to AudioManager2 script
+        audioManager = FindObjectOfType<AudioManager2>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         bool hasHit = Physics.Linecast(startSlicePoint.position, endSlicePoint.position, out RaycastHit hit, sliceableLayer);
-        if(hasHit)
+        if (hasHit)
         {
             GameObject target = hit.transform.gameObject;
             if (target.gameObject.tag == "Zombie")
                 Slice(target);
-
         }
     }
 
@@ -42,7 +44,7 @@ public class SliceObject : MonoBehaviour
 
         SlicedHull hull = target.Slice(endSlicePoint.position, planeNormal);
 
-        if(hull != null)
+        if (hull != null)
         {
             // Check if the sliced object is on the penalty layer (assuming layer 6 is for penalty objects)
             if (target.layer == 6) // Using the layer number directly
@@ -50,11 +52,12 @@ public class SliceObject : MonoBehaviour
                 DisplayScore.score -= 5; // Deduct points for slicing a penalty object
             }
             else
-
-
             {
                 DisplayScore.score++;
             }
+
+            // Play the slicing sound effect
+            audioManager.PlaySlicedSound();
 
             GameObject upperHull = hull.CreateUpperHull(target, crossSectionMaterial);
             SetupSlicedComponent(upperHull);

@@ -9,6 +9,7 @@ TagManager:
   - Zombie
   - Heart
   - Ground
+  - Boundary
   layers:
   - Default
   - TransparentFX
