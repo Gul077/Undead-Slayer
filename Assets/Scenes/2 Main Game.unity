@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.029087335, g: 0.0298977, b: 0.029896766, a: 1}
+  m_IndirectSpecularColor: {r: 0.029087335, g: 0.0298977, b: 0.029896773, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,6 +156,7 @@ MonoBehaviour:
   crossSectionMaterial: {fileID: 2100000, guid: f80f4c0ce009a5547bddded1dd13711d,
     type: 2}
   cutForce: 2000
+  Blood: {fileID: 2132930560037543354, guid: 59d4fbc407748b34f99a81273b96840e, type: 3}
 --- !u!1 &56926530
 GameObject:
   m_ObjectHideFlags: 0
@@ -3531,6 +3532,7 @@ MonoBehaviour:
   crossSectionMaterial: {fileID: 2100000, guid: f80f4c0ce009a5547bddded1dd13711d,
     type: 2}
   cutForce: 2000
+  Blood: {fileID: 2132930560037543354, guid: 59d4fbc407748b34f99a81273b96840e, type: 3}
 --- !u!114 &2429146838371429987
 MonoBehaviour:
   m_ObjectHideFlags: 0

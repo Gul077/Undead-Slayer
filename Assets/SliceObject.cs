@@ -14,6 +14,8 @@ public class SliceObject : MonoBehaviour
     public Material crossSectionMaterial;
     public float cutForce = 2000;
 
+    public GameObject Blood;
+
     // Reference to AudioManager2 script
     private AudioManager2 audioManager;
 
@@ -33,6 +35,8 @@ public class SliceObject : MonoBehaviour
             GameObject target = hit.transform.gameObject;
             if (target.gameObject.tag == "Zombie")
                 Slice(target);
+
+                Instantiate(Blood, transform.position, Quaternion.identity);
         }
     }
 
