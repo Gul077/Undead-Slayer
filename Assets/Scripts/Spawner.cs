@@ -11,27 +11,41 @@ public class Spawner : MonoBehaviour
     public float spawnTimer = 2;
     private float timer;
 
-    // Start is called before the first frame update
+    private bool gameStarted = false;
+
     void Start()
     {
-        
+        CountdownTimer.OnCountdownComplete += StartSpawning;
     }
 
-    // Update is called once per frame
+    void OnDestroy()
+    {
+        CountdownTimer.OnCountdownComplete -= StartSpawning;
+    }
+
     void Update()
     {
-        timer += Time.deltaTime;
-        if(timer > spawnTimer)
+        if (gameStarted)
         {
-            Transform randomPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-            GameObject randomPrefab = prefabs[Random.Range(0, prefabs.Length)];
+            timer += Time.deltaTime;
+            if (timer > spawnTimer)
+            {
+                Transform randomPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+                GameObject randomPrefab = prefabs[Random.Range(0, prefabs.Length)];
 
-            GameObject spawnedPrefab = Instantiate(randomPrefab, randomPoint.position, randomPoint.rotation);
+                GameObject spawnedPrefab = Instantiate(randomPrefab, randomPoint.position, randomPoint.rotation);
 
-            timer -= spawnTimer;
+                timer -= spawnTimer;
 
-            Rigidbody rb = spawnedPrefab.GetComponent<Rigidbody>();
-            rb.velocity = randomPoint.forward * velocityIntensity;
+                Rigidbody rb = spawnedPrefab.GetComponent<Rigidbody>();
+                rb.velocity = randomPoint.forward * velocityIntensity;
+            }
         }
+    }
+
+    void StartSpawning()
+    {
+        gameStarted = true;
+        Debug.Log("Spawning started!");
     }
 }
