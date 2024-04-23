@@ -34,10 +34,15 @@ public class SliceObject : MonoBehaviour
         {
             GameObject target = hit.transform.gameObject;
             if (target.gameObject.tag == "Zombie")
+            {
                 Slice(target);
 
                 Instantiate(Blood, transform.position, Quaternion.identity);
+            }
+            
+
         }
+                
     }
 
     public void Slice(GameObject target)

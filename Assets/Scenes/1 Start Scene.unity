@@ -435,6 +435,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6598815579406187026, guid: 18ddb545287c546e19cc77dc9fbb2189,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_RootOrder
@@ -4403,7 +4408,7 @@ MonoBehaviour:
     and quick reflexes in a post-apocalyptic world infested with zombies. \n\nPlayers
     are armed with dual swords and must slice through infected zombie body parts
     such as skulls, heads, arms, feet, and brains to accumulate points. The objective
-    is to reach a score of 50 within 120 seconds to win the game. As players progress,
+    is to reach a score of 20 within 120 seconds to win the game. As players progress,
     hearts will appear amidst the zombie parts; slicing these hearts will reduce
     the player's score, adding a layer of strategy and caution to the frenetic action.
     \n\nThis game combines intense physical activity with split-second decision-making,

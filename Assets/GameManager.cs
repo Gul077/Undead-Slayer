@@ -10,40 +10,31 @@ public class GameManager : MonoBehaviour
 
     private int score = 0;
     private float timeRemaining = 120f; // 2 minutes
-    private bool gameIsActive = false;
-    private bool canUpdateTimerAndScore = true; // Flag to control updating of timer and score
+    private bool gameIsActive = true;
 
-    public int targetScore = 100;
+    public int targetScore = 20; // Target score to win the game
 
     void Start()
     {
-        CountdownTimer.OnCountdownComplete += StartGame;
+        UpdateScoreText();
+        UpdateTimerText();
         youWinPanel.SetActive(false);
         youLosePanel.SetActive(false);
     }
 
-    void OnDestroy()
-    {
-        CountdownTimer.OnCountdownComplete -= StartGame;
-    }
-
     void Update()
     {
-        if (gameIsActive && canUpdateTimerAndScore) // Only update timer and score if the game is active and the flag is true
+        if (gameIsActive)
         {
             CountDownTimer();
             CheckWinCondition();
-            UpdateTimerText(); // Update timer only when the game is active
         }
     }
 
     public void AddScore(int pointsToAdd)
     {
-        if (canUpdateTimerAndScore) // Only update score if the flag is true
-        {
-            score += pointsToAdd;
-            UpdateScoreText();
-        }
+        score += pointsToAdd;
+        UpdateScoreText();
     }
 
     void UpdateScoreText()
@@ -56,6 +47,7 @@ public class GameManager : MonoBehaviour
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
+            UpdateTimerText();
         }
         else
         {
@@ -87,12 +79,5 @@ public class GameManager : MonoBehaviour
         {
             youLosePanel.SetActive(true);
         }
-    }
-
-    void StartGame()
-    {
-        gameIsActive = true;
-        canUpdateTimerAndScore = true; // Set the flag to true when the game starts
-        Debug.Log("Game started!");
     }
 }
