@@ -1,1 +1,1 @@
-This is the Whitebox for the Zombie Slayer - VR Game Project 
+This is Undead Slayer Game.
